@@ -10,6 +10,7 @@ import path from "path";
 import { fileURLToPath } from "url";
 import authRoutes from "./routes/auth";
 import { register } from "./controllers/auth";
+import { verifyToken } from "../middleware/auth";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -36,7 +37,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage });
 
 /** ROUTES WITH FILES */
-app.post("/auth/register", upload.single("picture"), register);
+app.post("/auth/register", upload.single("picture"), verifyToken, register);
 
 /** ROUTES */
 app.use("/auth", authRoutes);
