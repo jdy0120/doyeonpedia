@@ -5,3 +5,5 @@ export type User = {
 export type Post = {
   _id: string;
 };
+
+export type ThemeColor = "light" | "dark";
