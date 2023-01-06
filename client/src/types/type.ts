@@ -6,4 +6,4 @@ export type Post = {
   _id: string;
 };
 
-export type ThemeColor = "light" | "dark";
+export type Mode = "light" | "dark";

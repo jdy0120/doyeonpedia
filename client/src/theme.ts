@@ -1,4 +1,4 @@
-import { ThemeColor } from "./types/type";
+import { Mode } from "./types/type";
 
 // color design tokens export
 export const colorTokens = {
@@ -32,7 +32,7 @@ export const colorTokens = {
 };
 
 // mui theme settings
-export const themeSettings = (mode: ThemeColor) => {
+export const themeSettings = (mode: Mode) => {
   return {
     palette: {
       mode: mode,
