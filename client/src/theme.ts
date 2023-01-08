@@ -31,20 +31,6 @@ export const colorTokens = {
   },
 };
 
-declare module "@mui/material/styles/createPalette" {
-  interface Palette {
-    neutral: {
-      dark: string;
-      main: string;
-      mediumMain: string;
-      medium: string;
-      light: string;
-    };
-
-    mode: Mode;
-  }
-}
-
 // mui theme settings
 export const themeSettings = (mode: Mode) => {
   return {
